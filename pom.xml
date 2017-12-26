@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.dyj</groupId>
+  <artifactId>MDCTest</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>MDCTest Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--logback-->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>3.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!--httpClient有两类jar包，一类不再维护，一类还在维护，并建议使用-->
+
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.4</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient -->
+    <!--The Commons HttpClient project is now end of life, and is no longer being developed.
+    It has been replaced by the Apache HttpComponents project in its HttpClient and HttpCore modules,
+     which offer better performance and more flexibility. -->
+    <!--<dependency>-->
+      <!--<groupId>commons-httpclient</groupId>-->
+      <!--<artifactId>commons-httpclient</artifactId>-->
+      <!--<version>3.0.1</version>-->
+    <!--</dependency>-->
+
+
+  </dependencies>
+  <build>
+    <finalName>MDCTest</finalName>
+  </build>
+</project>
