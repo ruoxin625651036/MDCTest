@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * a little description
  *
- * @author duanyuejiao
+ * @author dyj
  */
 public class ContextHolder {
     private static ThreadLocal<Map<String, String>> context = new ThreadLocal<Map<String, String>>();

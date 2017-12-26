@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 /**
  * a little description
  *
- * @author duanyuejiao
+ * @author dyj
  */
 public class TestServlet extends HttpServlet {
 

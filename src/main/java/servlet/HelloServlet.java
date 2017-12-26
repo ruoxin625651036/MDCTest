@@ -25,7 +25,7 @@ import util.ContextHolder;
 /**
  * a little description
  *
- * @author duanyuejiao
+ * @author dyj
  */
 public class HelloServlet extends HttpServlet {
 
@@ -40,12 +40,12 @@ public class HelloServlet extends HttpServlet {
         // 在spring中使用RestClient
         CloseableHttpClient httpclient = HttpClients.createDefault();
 
-        HttpGet getMethod = new HttpGet("http://localhost:8080/test");
+        HttpGet httpGet = new HttpGet("http://localhost:8080/test");
         Map<String, String> contextHolder = ContextHolder.get();
         for (Map.Entry entry : contextHolder.entrySet()) {
-            getMethod.addHeader((String) entry.getKey(), (String) entry.getValue());
+            httpGet.addHeader((String) entry.getKey(), (String) entry.getValue());
         }
-        HttpResponse response = httpclient.execute(getMethod);
+        HttpResponse response = httpclient.execute(httpGet);
         logger.info(response.getEntity().getContent().toString());
 
         resp.getWriter().write("Hello Servlet!");

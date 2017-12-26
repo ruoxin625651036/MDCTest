@@ -30,7 +30,7 @@ import util.ContextHolder;
  *         怎样将业务ID传入Request中的？(HttpServletRequest中没有相关方法添加header,它是先存入上下文ContextHolder中，然后再去取，ThreadLocal实现的)
  *
  *
- * @author duanyuejiao
+ * @author dyj
  */
 public class MDCFilter implements Filter {
 
