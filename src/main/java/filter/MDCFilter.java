@@ -1,6 +1,6 @@
 package filter; /**
- * Baifubao.com,Inc.
- * Copyright (c) 2017-2018 All Rights Reserved.
+ *
+ *
  */
 
 import java.io.IOException;
@@ -21,11 +21,11 @@ import util.ContextHolder;
 /**
  *   过滤器
  *
- *   MDC是用于本线程的跟踪；将业务值传入Request的Header中，是为了不同线程（如不同系统）的跟踪
+ *   MDC是用于本线程的跟踪；将业务值传入Request的Header中(Spring里可以使用RestTemplate完成)，是为了不同线程（如不同系统）的跟踪
  *
  *   考虑问题：
  *
- *         怎样保证所生成的traceId是唯一的？ (LogId一般有前端的负载生成，比如Nginx或Lighttpd,这句话含义？)
+ *         怎样保证所生成的traceId是唯一的？ (LogId一般有前端的负载生成，比如Nginx或Lighttpd,这句话含义？logId + 自定义UUID随机 组成)
  *
  *         怎样将业务ID传入Request中的？(HttpServletRequest中没有相关方法添加header,它是先存入上下文ContextHolder中，然后再去取，ThreadLocal实现的)
  *
